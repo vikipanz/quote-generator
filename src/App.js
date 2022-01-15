@@ -1,8 +1,9 @@
 import React from "react";
-import Axios from "axios";
+
+import axios from "axios";
 
 import './App.css';
-import axios from "axios";
+
 
 class App extends React.Component{
 
@@ -17,7 +18,6 @@ class App extends React.Component{
         axios.get('https://api.adviceslip.com/advice')
             .then((response) => {
                 const { advice } = response.data.slip;
-
                 this.setState({ advice });
             }) 
             .catch((error) => {
